@@ -6,5 +6,7 @@ ogurl = "%20".join(args)
 os.mkdir(shorturl)
 with open(f"{shorturl}/index.html", "w") as f:
 	f.write(f"<!DOCTYPE html><html><head><title>REDIRECTING TO {ogurl}</title><meta http-equiv=\"refresh\" content=\"0; url={ogurl}\"></head><body><a href=\"{ogurl}\">If you are not redirected automatically, click this link</a></body></html>")
-os.system("./push")
+with open("push") as f:
+	for i in f.read().split("\n"):
+		os.system(i)
 print(f"Created redirect https://donkasem55.github.io/tlclnk/{shorturl} which redirects to {ogurl}")

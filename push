@@ -1,3 +1,4 @@
 git add .
-git commit -m "added links"
+git commit -m "e"
 git push
+echo pushed!
