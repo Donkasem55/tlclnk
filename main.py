@@ -5,7 +5,7 @@ args.pop()
 ogurl = "%20".join(args)
 os.mkdir(shorturl)
 with open(f"{shorturl}/index.html", "w") as f:
-	f.write(f"<!DOCTYPE html><html><head><title>REDIRECTING TO {ogurl}</title><meta http-equiv=\"refresh\" content=\"0; url={ogurl}\"></head><body><a href=\"{ogurl}\">If you are not redirected automatically, click this link</a></body></html>")
+	f.write(f"<!DOCTYPE html><html><head><title>REDIRECTING TO {ogurl}</title><meta http-equiv=\"refresh\" content=\"0; url={ogurl}\"></head><body><a href=\"{ogurl}\"><h1>REDIRECTING...</h1></a></body></html>")
 with open("push") as f:
 	for i in f.read().split("\n"):
 		os.system(i)
